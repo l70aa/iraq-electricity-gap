@@ -15,6 +15,8 @@ An Arabic Power BI report and reproducible SQL analysis of electricity demand, s
 
 Demand grew by almost as much as supply, so the gap fell only 162 MW. At a 70% coverage target and 5% demand growth, the model calls for 20,496 MW of supply, or **5,818 MW above the 2025 baseline**.
 
+![Power BI updated after selecting 70% coverage and 5% demand growth](docs/powerbi-scenario.png)
+
 ## Open and reproduce
 
 1. Download or clone the entire repository. Keep the Power BI project file next to its report and semantic model folders.
