@@ -17,10 +17,16 @@ Demand grew by almost as much as supply, so the gap fell only 162 MW. At a 70% c
 
 ![Power BI updated after selecting 70% coverage and 5% demand growth](docs/powerbi-scenario.png)
 
+## Other report pages
+
+![2024 governorate analysis and electricity gap ranking](docs/powerbi-governorates.png)
+
+![Iraq annual electricity demand and generation with a year filter](docs/powerbi-national.png)
+
 ## Open and reproduce
 
 1. Download or clone the entire repository. Keep the Power BI project file next to its report and semantic model folders.
-2. Open [the PBIP project](powerbi/Iraq%20Electricity%20-%20Diagnostics%20Charts.pbip) in Power BI Desktop. On the diagnostics page, select one coverage target (60%, 70%, or 80%) and one demand growth assumption (0%, 5%, or 10%). The two scenario charts recalculate. The historical chart shows the observed gap.
+2. Open [the PBIP project](powerbi/Iraq%20Electricity%20-%20Diagnostics%20Charts.pbip) in Power BI Desktop. On first open, choose **Refresh now** if Power BI shows an incomplete-data banner. Then, on the diagnostics page, select one coverage target (60%, 70%, or 80%) and one demand growth assumption (0%, 5%, or 10%). The two scenario charts recalculate. The historical chart shows the observed gap.
 3. Run `python build.py` from the repository root to rebuild the SQLite database and CSV outputs using the standard Python library. Check [the SQL views](analysis.sql) and [the scenario output](outputs/grid_target.csv).
 4. Open [the 2024 Excel workbook](outputs/excel/Iraq%20Electricity%202024.xlsx) for the governorate-level analysis. The Power BI project includes a snapshot of the source values.
 
