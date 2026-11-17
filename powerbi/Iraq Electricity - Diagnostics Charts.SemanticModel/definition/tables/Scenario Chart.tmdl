@@ -1,0 +1,23 @@
+table 'Scenario Chart'
+	lineageTag: fcce309c-69ca-4514-966e-47bb9c5754c0
+
+	measure 'التجهيز بالميغاواط' =
+			SWITCH(SELECTEDVALUE('Scenario Chart'[البند]),
+			        "تجهيز 2025", 14678,
+			        "التجهيز المطلوب", [التجهيز المطلوب],
+			        "التجهيز الإضافي", [التجهيز الإضافي])
+		formatString: #,0
+		lineageTag: e44f309f-2080-4c67-a02c-0cf1a8534813
+
+	column البند
+		dataType: string
+		lineageTag: b58bfa7a-ec0a-40fa-824d-cbbd6d92a6a6
+		summarizeBy: none
+		sourceColumn: البند
+
+	partition 'Scenario Chart' = m
+		mode: import
+		source = #table(type table [البند = text], {{"تجهيز 2025"}, {"التجهيز المطلوب"}, {"التجهيز الإضافي"}})
+
+	annotation PBI_ResultType = Table
+

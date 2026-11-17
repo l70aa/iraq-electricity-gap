@@ -1,0 +1,22 @@
+table 'Coverage Target'
+	lineageTag: 9b2ac2dd-024d-4ce0-9453-58f47efe2913
+
+	column الهدف
+		dataType: string
+		lineageTag: 0984b631-0514-497e-9261-43939f34a0ed
+		summarizeBy: none
+		sourceColumn: الهدف
+
+	column pct
+		dataType: int64
+		formatString: 0
+		lineageTag: 98d0ce17-a028-4741-bf85-aea53b241fc4
+		summarizeBy: none
+		sourceColumn: pct
+
+	partition 'Coverage Target' = m
+		mode: import
+		source = #table(type table [الهدف = text, pct = Int64.Type], {{"60%", 60}, {"70%", 70}, {"80%", 80}})
+
+	annotation PBI_ResultType = Table
+

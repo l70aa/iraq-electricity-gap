@@ -1,0 +1,57 @@
+table Grid
+	lineageTag: 33bcd786-d2a0-47b4-a205-873d64411afa
+
+	measure السكان = SUM(Grid[population])
+		formatString: #,0
+		lineageTag: 63a21af5-39cc-4df7-8cb8-26f78c9079bc
+
+	measure الطلب = SUM(Grid[demand_mw])
+		formatString: #,0
+		lineageTag: 0254a6c7-87cf-47d0-ad6b-2e6063f70d05
+
+	measure التجهيز = SUM(Grid[supplied_mw])
+		formatString: #,0
+		lineageTag: a825f566-2872-46a9-b7b8-60842837a280
+
+	measure العجز = [الطلب] - [التجهيز]
+		formatString: #,0
+		lineageTag: 2e299046-70d1-4c63-9f7c-b79ee1e7d274
+
+	measure التغطية = DIVIDE([التجهيز], [الطلب])
+		formatString: 0.00%
+		lineageTag: 7ed9a25f-f737-4110-92c2-d2f73282516c
+
+	measure 'العجز لكل 100 ألف' = DIVIDE([العجز] * 100000, [السكان])
+		formatString: 0.00
+		lineageTag: 9dac824f-de5e-4cd3-986d-175456863126
+
+	column governorate
+		dataType: string
+		lineageTag: c8b943db-4b87-4a11-9a0d-dfabb3b9a72f
+		summarizeBy: none
+		sourceColumn: governorate
+
+	column population
+		dataType: int64
+		lineageTag: 58932770-7b1b-4cda-8f7f-fb33080c54a7
+		summarizeBy: none
+		sourceColumn: population
+
+	column demand_mw
+		dataType: int64
+		lineageTag: e2eeb0ab-14a0-4c01-b518-754d75987aef
+		summarizeBy: none
+		sourceColumn: demand_mw
+
+	column supplied_mw
+		dataType: int64
+		lineageTag: b01fd451-5268-4bd5-a470-6f729ac1aeaa
+		summarizeBy: none
+		sourceColumn: supplied_mw
+
+	partition Grid = m
+		mode: import
+		source = #table(type table [governorate=text, population=Int64.Type, demand_mw=Int64.Type, supplied_mw=Int64.Type], {{"الأنبار", 2064003, 2050, 723}, {"بابل", 2405773, 2560, 919}, {"بغداد", 9498480, 10450, 6129}, {"البصرة", 3388399, 3692, 2712}, {"ذي قار", 2440887, 1803, 1160}, {"ديالى", 1876581, 2175, 761}, {"كربلاء", 1419817, 2402, 907}, {"كركوك", 1861546, 2033, 978}, {"ميسان", 1296276, 1131, 712}, {"المثنى", 948749, 755, 479}, {"النجف", 1714415, 2196, 853}, {"نينوى", 4345445, 2675, 1449}, {"القادسية", 1504063, 1458, 544}, {"صلاح الدين", 1858447, 2040, 961}, {"واسط", 1606225, 1465, 581}})
+
+	annotation PBI_ResultType = Table
+

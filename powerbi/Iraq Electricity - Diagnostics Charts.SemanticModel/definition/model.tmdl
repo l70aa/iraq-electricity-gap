@@ -1,0 +1,21 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Grid","Annual Gap","Coverage Target","Demand Growth","Supply Targets","Scenario Chart","Scenario Balance","National"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Grid
+ref table 'Annual Gap'
+ref table 'Coverage Target'
+ref table 'Demand Growth'
+ref table 'Supply Targets'
+ref table 'Scenario Chart'
+ref table 'Scenario Balance'
+ref table National
+

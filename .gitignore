@@ -1,0 +1,4 @@
+.pbi/
+__pycache__/
+*.pyc
+outputs/*.sqlite

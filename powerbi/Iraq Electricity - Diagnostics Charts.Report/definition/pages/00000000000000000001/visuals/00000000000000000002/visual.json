@@ -1,0 +1,244 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "00000000000000000002",
+  "position": {
+    "x": 720,
+    "y": 245,
+    "z": 2,
+    "height": 330,
+    "width": 696,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Grid"
+                    }
+                  },
+                  "Property": "governorate"
+                }
+              },
+              "queryRef": "Grid.governorate",
+              "nativeQueryRef": "المحافظة",
+              "active": true
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Grid"
+                    }
+                  },
+                  "Property": "التغطية"
+                }
+              },
+              "queryRef": "Grid.التغطية",
+              "nativeQueryRef": "التغطية"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Grid"
+                    }
+                  },
+                  "Property": "العجز لكل 100 ألف"
+                }
+              },
+              "queryRef": "Grid.العجز لكل 100 ألف",
+              "nativeQueryRef": "العجز لكل 100 ألف نسمة"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Grid"
+                    }
+                  },
+                  "Property": "السكان"
+                }
+              },
+              "queryRef": "Grid.السكان",
+              "nativeQueryRef": "عدد السكان"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Grid"
+                    }
+                  },
+                  "Property": "الطلب"
+                }
+              },
+              "queryRef": "Grid.الطلب",
+              "nativeQueryRef": "الطلب (MW)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Grid"
+                    }
+                  },
+                  "Property": "العجز"
+                }
+              },
+              "queryRef": "Grid.العجز",
+              "nativeQueryRef": "العجز (MW)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Grid"
+                  }
+                },
+                "Property": "السكان"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'السكان والطلب | حجم الدائرة يبيّن العجز'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "36504ab6499cb7c1603b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Grid"
+              }
+            },
+            "Property": "governorate"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fb6c30c0bb3b47e36504",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Grid"
+              }
+            },
+            "Property": "السكان"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e7632f732a2a61b36e43",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Grid"
+              }
+            },
+            "Property": "الطلب"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "041f8a8c01d557a52319",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Grid"
+              }
+            },
+            "Property": "العجز"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "50741dfba0d6de5686d8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Grid"
+              }
+            },
+            "Property": "التغطية"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4eceb1a032b4220132c2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Grid"
+              }
+            },
+            "Property": "العجز لكل 100 ألف"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Iraq Electricity - Diagnostics Charts"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7266a2ee-bd41-4cec-8a1d-7151e5d35d5a"
+  }
+}

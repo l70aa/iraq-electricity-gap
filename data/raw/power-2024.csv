@@ -1,0 +1,16 @@
+governorate,year,demand_mw,supplied_mw,source_url
+Baghdad,2024,10450,6129,https://iraqem.com/governorates/baghdad
+Anbar,2024,2050,723,https://iraqem.com/governorates/anbar
+Babil,2024,2560,919,https://iraqem.com/governorates/
+Basra,2024,3692,2712,https://iraqem.com/governorates/
+Dhi Qar,2024,1803,1160,https://iraqem.com/governorates/
+Diyala,2024,2175,761,https://iraqem.com/governorates/
+Karbala,2024,2402,907,https://iraqem.com/governorates/
+Kirkuk,2024,2033,978,https://iraqem.com/governorates/
+Maysan,2024,1131,712,https://iraqem.com/governorates/
+Muthanna,2024,755,479,https://iraqem.com/governorates/
+Najaf,2024,2196,853,https://iraqem.com/governorates/
+Nineveh,2024,2675,1449,https://iraqem.com/governorates/
+Qadisiyah,2024,1458,544,https://iraqem.com/governorates/
+Salah al-Din,2024,2040,961,https://iraqem.com/governorates/
+Wasit,2024,1465,581,https://iraqem.com/governorates/

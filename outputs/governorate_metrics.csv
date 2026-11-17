@@ -1,0 +1,16 @@
+﻿governorate,year,population,demand_mw,supplied_mw,gap_mw,coverage_pct,gap_mw_per_100k,status,source_url
+Anbar,2024,2064003,2050,723,1327,35.27,64.29,Matched,https://iraqem.com/governorates/anbar
+Babil,2024,2405773,2560,919,1641,35.9,68.21,Matched,https://iraqem.com/governorates/
+Baghdad,2024,9498480,10450,6129,4321,58.65,45.49,Matched,https://iraqem.com/governorates/baghdad
+Basra,2024,3388399,3692,2712,980,73.46,28.92,Matched,https://iraqem.com/governorates/
+Dhi Qar,2024,2440887,1803,1160,643,64.34,26.34,Matched,https://iraqem.com/governorates/
+Diyala,2024,1876581,2175,761,1414,34.99,75.35,Matched,https://iraqem.com/governorates/
+Karbala,2024,1419817,2402,907,1495,37.76,105.3,Matched,https://iraqem.com/governorates/
+Kirkuk,2024,1861546,2033,978,1055,48.11,56.67,Matched,https://iraqem.com/governorates/
+Maysan,2024,1296276,1131,712,419,62.95,32.32,Matched,https://iraqem.com/governorates/
+Muthanna,2024,948749,755,479,276,63.44,29.09,Matched,https://iraqem.com/governorates/
+Najaf,2024,1714415,2196,853,1343,38.84,78.34,Matched,https://iraqem.com/governorates/
+Nineveh,2024,4345445,2675,1449,1226,54.17,28.21,Matched,https://iraqem.com/governorates/
+Qadisiyah,2024,1504063,1458,544,914,37.31,60.77,Matched,https://iraqem.com/governorates/
+Salah al-Din,2024,1858447,2040,961,1079,47.11,58.06,Matched,https://iraqem.com/governorates/
+Wasit,2024,1606225,1465,581,884,39.66,55.04,Matched,https://iraqem.com/governorates/

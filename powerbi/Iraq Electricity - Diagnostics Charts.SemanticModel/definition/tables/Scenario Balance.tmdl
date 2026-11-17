@@ -1,0 +1,24 @@
+table 'Scenario Balance'
+	lineageTag: 41435275-8d8e-4e4f-948a-d53ce01ad4b0
+
+	measure 'الطلب والعجز بالميغاواط' =
+			VAR GrowthPct = SELECTEDVALUE('Demand Growth'[pct], 0)
+			VAR DemandMW = ROUNDUP(27885 * (100 + GrowthPct) / 100, 0)
+			RETURN SWITCH(SELECTEDVALUE('Scenario Balance'[البند]),
+			    "الطلب المتوقع", DemandMW,
+			    "العجز المتبقي عند الهدف", MAX(0, DemandMW - [التجهيز المطلوب]))
+		formatString: #,0
+		lineageTag: f55cd7e1-b471-4f69-bb5b-47806a3bcd8f
+
+	column البند
+		dataType: string
+		lineageTag: 4520c824-53e3-4595-a0f3-c51ad82f5feb
+		summarizeBy: none
+		sourceColumn: البند
+
+	partition 'Scenario Balance' = m
+		mode: import
+		source = #table(type table [البند = text], {{"الطلب المتوقع"}, {"العجز المتبقي عند الهدف"}})
+
+	annotation PBI_ResultType = Table
+

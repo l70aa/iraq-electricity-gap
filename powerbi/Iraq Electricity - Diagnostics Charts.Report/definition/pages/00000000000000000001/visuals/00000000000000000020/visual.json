@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "00000000000000000020",
+  "position": {
+    "x": 474,
+    "y": 143,
+    "z": 32,
+    "width": 215,
+    "height": 88,
+    "tabOrder": 32
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Grid"
+                    }
+                  },
+                  "Property": "التجهيز"
+                }
+              },
+              "queryRef": "Grid.التجهيز",
+              "nativeQueryRef": "التجهيز",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'🔌 التجهيز (MW)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

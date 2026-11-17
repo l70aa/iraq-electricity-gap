@@ -1,0 +1,28 @@
+table National
+	lineageTag: e53b450c-0565-4635-8287-284a59d04b4d
+
+	column السنة
+		dataType: int64
+		formatString: 0
+		lineageTag: d9fa87c6-816d-451b-9054-94771d1987af
+		summarizeBy: none
+		sourceColumn: السنة
+
+	column generation_twh
+		dataType: double
+		lineageTag: f81de515-bf67-4d06-abdb-483dc5d13363
+		summarizeBy: none
+		sourceColumn: generation_twh
+
+	column demand_twh
+		dataType: double
+		lineageTag: 8f79fd92-d728-436c-b3d2-9e611f1e0f6c
+		summarizeBy: none
+		sourceColumn: demand_twh
+
+	partition National = m
+		mode: import
+		source = #table(type table [السنة = Int64.Type, generation_twh = number, demand_twh = number], {{1985, 20.973, null}, {1986, 22.287, null}, {1987, 22.51, null}, {1988, 23.45, null}, {1989, 23.86, null}, {1990, 28.373, null}, {1991, 13.359, null}, {1992, 21.912, null}, {1993, 27.09, null}, {1994, 26.663, null}, {1995, 26.498, null}, {1996, 25.981, null}, {1997, 26.693, null}, {1998, 26.744, null}, {1999, 24.721, null}, {2000, 31.9, 31.9}, {2001, 32.25, 32.25}, {2002, 33.86, 33.86}, {2003, 28.33, 28.33}, {2004, 32.29, 33.61}, {2005, 30.4, 31.64}, {2006, 33.83, 36.52}, {2007, 33.24, 35.44}, {2008, 36.88, 39.85}, {2009, 37.85, 43.44}, {2010, 48.91, 55.63}, {2011, 53.9, 61.13}, {2012, 46.02, 56.19}, {2013, 58.9, 68.14}, {2014, 69.03, 77.89}, {2015, 70.64, 79.81}, {2016, 81.93, 90.07}, {2017, 93.58, 99.22}, {2018, 98.41, 103.09}, {2019, 115.21, 121.76}, {2020, 117.12, 124.57}, {2021, 120.46, 125.56}, {2022, 133.86, 137.39}, {2023, 145.01, 151.83}, {2024, 149.73, 156.83}})
+
+	annotation PBI_ResultType = Table
+

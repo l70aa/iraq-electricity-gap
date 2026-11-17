@@ -1,0 +1,22 @@
+table 'Demand Growth'
+	lineageTag: 0442ce36-7c95-4640-97ab-a3a2d6dfc102
+
+	column النمو
+		dataType: string
+		lineageTag: f1f958a5-3f9f-48b5-bff4-73dc0e00505b
+		summarizeBy: none
+		sourceColumn: النمو
+
+	column pct
+		dataType: int64
+		formatString: 0
+		lineageTag: c7141d19-65b0-465f-852e-3568c20f4ffa
+		summarizeBy: none
+		sourceColumn: pct
+
+	partition 'Demand Growth' = m
+		mode: import
+		source = #table(type table [النمو = text, pct = Int64.Type], {{"0%", 0}, {"5%", 5}, {"10%", 10}})
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,22 @@
+table 'Annual Gap'
+	lineageTag: 855e3318-3d5c-4df4-9b1e-27844847878d
+
+	column السنة
+		dataType: string
+		lineageTag: bd0ad2b2-a331-4577-8a8f-ddf35b99956e
+		summarizeBy: none
+		sourceColumn: السنة
+
+	column العجز
+		dataType: int64
+		formatString: 0
+		lineageTag: ca9b456f-b42a-4f46-bcc3-5ba5279fbc9d
+		summarizeBy: none
+		sourceColumn: العجز
+
+	partition 'Annual Gap' = m
+		mode: import
+		source = #table(type table [السنة = text, العجز = Int64.Type], {{"2024", 13369}, {"2025", 13207}})
+
+	annotation PBI_ResultType = Table
+
